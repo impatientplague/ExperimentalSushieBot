@@ -1,30 +1,30 @@
 class Cord:
     
-    f_shrimp = (34, 228)
-    f_rice = (87, 224)
-    f_nori = (37, 282)
-    f_roe = (92, 281)
-    f_salmon = (37, 336)
-    f_unagi = (90, 335)
+    f_shrimp = (33, 329)
+    f_rice = (90, 333)
+    f_nori = (38, 384)
+    f_roe = (88, 379)
+    f_salmon = (33, 437)
+    f_unagi = (872, 385)
 
 #---------------------------------------
 
-    phone = (590, 252)
+    phone = (587, 349)
     
     
-    menu_toppings = (536, 166)
+    menu_toppings = (520, 269)
         
-    t_shrimp = (491, 118)
-    t_nori = (493, 171)
-    t_roe = (571, 172)
-    t_salmon = (491, 227)
-    t_unagi = (575, 118)
-    t_exit = (594, 229)
+    t_shrimp = (494, 220)
+    t_nori = (490, 274)
+    t_roe = (573, 272)
+    t_salmon = (490, 328)
+    t_unagi = (574, 222)
+    t_exit = (593, 329)
     
-    menu_rice = (525, 191)
-    buy_rice = (543, 176)
+    menu_rice = (509, 290)
+    buy_rice = (544, 277)
         
-    delivery_norm = () 
+    delivery_norm = (489, 290) 
     
 #---------------------------------------
     

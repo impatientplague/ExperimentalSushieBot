@@ -7,7 +7,7 @@ import mouse_util
 
 def screenGrab():
     box = (mouse_util.x_pad + 1, mouse_util.y_pad + 1, mouse_util.x_pad+636, mouse_util.y_pad+475)
-    im = ImageGrab.grab(box)
+    im = ImageGrab.grab()
     #im.save(os.getcwd() + '\\full_snap__' + str(int(time.time())) + '.png', 'PNG')
     return im
 
@@ -62,8 +62,3 @@ def get_order():
     get_slot3()
     get_slot4()
 
-def main():
-    get_order()
-
-if __name__=='__main__':
-    main()

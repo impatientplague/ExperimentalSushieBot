@@ -3,7 +3,12 @@ from grab_util import screenGrab
 from cord_util import Cord
 import time
 
-
+foodOnHand = {'shrimp':5,
+              'rice':10,
+              'nori':10,
+              'roe':10,
+              'salmon':5,
+              'unagi':5}
 
 def startGame():
     #location of first menu
@@ -51,6 +56,9 @@ def clear_tables():
 def makeFood(food):
     if food == 'caliroll':
         print 'Making a caliroll'
+        foodOnHand['rice'] -= 1
+        foodOnHand['nori'] -= 1
+        foodOnHand['roe'] -= 1 
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(.05)
@@ -62,9 +70,11 @@ def makeFood(food):
         time.sleep(.1)
         foldMat()
         time.sleep(1.5)
-
+     
     elif food == 'onigiri':
         print 'Making a onigiri'
+        foodOnHand['rice'] -= 2 
+        foodOnHand['nori'] -= 1 
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(.05)
@@ -76,10 +86,14 @@ def makeFood(food):
         time.sleep(.1)
         foldMat()
         time.sleep(.05)
-
+         
         time.sleep(1.5)
-
+ 
     elif food == 'gunkan':
+        print 'Making a gunkan'
+        foodOnHand['rice'] -= 1 
+        foodOnHand['nori'] -= 1 
+        foodOnHand['roe'] -= 2 
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(.05)
@@ -110,12 +124,13 @@ def buyFood(food):
         time.sleep(.05)
         leftClick()
         s = screenGrab()
-        if s.getpixel(Cord.buy_rice) != (127, 127, 127):
+        if s.getpixel(Cord.buy_rice) != (242, 223, 191):
             print 'rice is available'
             mousePos(Cord.buy_rice)
             time.sleep(.1)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodOnHand['rice'] += 10 
             time.sleep(.1)
             leftClick()
             time.sleep(2.5)
@@ -138,12 +153,13 @@ def buyFood(food):
         s = screenGrab()
         print 'test'
         time.sleep(.1)
-        if s.getpixel(Cord.t_nori) != (33, 30, 11):
+        if s.getpixel(Cord.t_nori) != (242, 223, 191):
             print 'nori is available'
             mousePos(Cord.t_nori)
             time.sleep(.1)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodOnHand['nori'] += 10 
             time.sleep(.1)
             leftClick()
             time.sleep(2.5)
@@ -164,12 +180,13 @@ def buyFood(food):
         s = screenGrab()
 
         time.sleep(.1)
-        if s.getpixel(Cord.t_roe) != (127, 61, 0):
+        if s.getpixel(Cord.t_roe) != (235, 167, 167):
             print 'roe is available'
             mousePos(Cord.t_roe)
             time.sleep(.1)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodOnHand['roe'] += 10 
             time.sleep(.1)
             leftClick()
             time.sleep(2.5)
@@ -181,4 +198,4 @@ def buyFood(food):
             buyFood(food)
             
             
-clear_tables()
+            
