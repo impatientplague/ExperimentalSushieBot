@@ -19,9 +19,8 @@ def grab():
     print a
     return a
 
-
-def get_slot1():
-    box = (726, 477, 794, 501)
+def need_rice():
+    box = (269, 546, 308, 583)
     im = ImageOps.grayscale(ImageGrab.grab(box))
     a = array(im.getcolors())
     a = a.sum()
