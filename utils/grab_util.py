@@ -6,7 +6,7 @@ import time
 import mouse_util
 
 def screenGrab():
-    box = (mouse_util.x_pad + 1, mouse_util.y_pad + 1, mouse_util.x_pad+613, mouse_util.y_pad+473)
+    box = (mouse_util.x_pad + 1, mouse_util.y_pad + 1, mouse_util.x_pad+636, mouse_util.y_pad+475)
     im = ImageGrab.grab(box)
     #im.save(os.getcwd() + '\\full_snap__' + str(int(time.time())) + '.png', 'PNG')
     return im

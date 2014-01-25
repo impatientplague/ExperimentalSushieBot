@@ -24,4 +24,13 @@ class Cord:
     menu_rice = (525, 191)
     buy_rice = (543, 176)
         
-    delivery_norm = ()    
+    delivery_norm = () 
+    
+#---------------------------------------
+    
+    table_one = (93, 210)
+    table_two = (194, 209)
+    table_three = (295, 209)
+    table_four = (393, 208)
+    table_five = (497, 210)
+    table_six = (601, 210)

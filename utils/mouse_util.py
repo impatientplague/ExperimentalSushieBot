@@ -4,8 +4,8 @@ import time
 # Globals
 # ------------------
 
-x_pad = 219
-y_pad = 177
+x_pad = 197
+y_pad = 231
 
 def leftClick():
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)

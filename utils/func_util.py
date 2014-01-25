@@ -28,22 +28,22 @@ def startGame():
 
 
 def clear_tables():
-    mousePos((78, 110))
+    mousePos(Cord.table_one)
     leftClick()
 
-    mousePos((192, 107))
+    mousePos(Cord.table_two)
     leftClick()
 
-    mousePos((293, 106))
+    mousePos(Cord.table_three)
     leftClick()
 
-    mousePos((393, 107))
+    mousePos(Cord.table_four)
     leftClick()
 
-    mousePos((496, 108))
+    mousePos(Cord.table_five)
     leftClick()
 
-    mousePos((603, 107))
+    mousePos(Cord.table_six)
     leftClick()
     time.sleep(1)
 
@@ -179,3 +179,6 @@ def buyFood(food):
             leftClick()
             time.sleep(1)
             buyFood(food)
+            
+            
+clear_tables()
