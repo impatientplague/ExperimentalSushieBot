@@ -60,6 +60,9 @@ def foldMat():
 def makeFood(food):
     if food == 'caliroll':
         print 'Making a caliroll'
+        foodOnHand['rice'] -= 1
+        foodOnHand['nori'] -= 1
+        foodOnHand['roe'] -= 1 
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(.05)
@@ -71,9 +74,11 @@ def makeFood(food):
         time.sleep(.1)
         foldMat()
         time.sleep(1.5)
-
+     
     elif food == 'onigiri':
         print 'Making a onigiri'
+        foodOnHand['rice'] -= 2 
+        foodOnHand['nori'] -= 1 
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(.05)
@@ -85,10 +90,14 @@ def makeFood(food):
         time.sleep(.1)
         foldMat()
         time.sleep(.05)
-
+         
         time.sleep(1.5)
-
+ 
     elif food == 'gunkan':
+        print 'Making a gunkan'
+        foodOnHand['rice'] -= 1 
+        foodOnHand['nori'] -= 1 
+        foodOnHand['roe'] -= 2 
         mousePos(Cord.f_rice)
         leftClick()
         time.sleep(.05)
@@ -103,7 +112,6 @@ def makeFood(food):
         time.sleep(.1)
         foldMat()
         time.sleep(1.5)
-
 
 def buyFood(food):
 
@@ -121,6 +129,7 @@ def buyFood(food):
             time.sleep(.1)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodOnHand['rice'] += 10  
             time.sleep(.1)
             leftClick()
             time.sleep(2.5)
@@ -149,6 +158,7 @@ def buyFood(food):
             time.sleep(.1)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodOnHand['nori'] += 10  
             time.sleep(.1)
             leftClick()
             time.sleep(2.5)
@@ -175,6 +185,7 @@ def buyFood(food):
             time.sleep(.1)
             leftClick()
             mousePos(Cord.delivery_norm)
+            foodOnHand['roe'] += 10  
             time.sleep(.1)
             leftClick()
             time.sleep(2.5)
@@ -191,5 +202,3 @@ def checkFood():
             if j <= 4:
                 print '%s is low and needs to be replenished' % i
                 buyFood(i)
-            
-            
